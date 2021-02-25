@@ -1,0 +1,20 @@
+<div class="full-width">
+
+  <h4 class="title">Add new item to the todo list</h4>
+
+  <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput formControlName="title" placeholder="Title">
+    </mat-form-field>
+  
+    <mat-form-field class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  
+    <button class="center submit-btn" [disabled]="itemForm.invalid" type="submit">
+      Add new item
+    </button>
+  </form>
+</div>

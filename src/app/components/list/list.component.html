@@ -1,0 +1,24 @@
+<div class="container-wr">
+  <div class="list-container">
+    <div class="list-item" [ngClass]="{'done': item.isDone }" *ngFor="let item of data">
+      
+      <div class="item-conteiner">
+        <div class="item-content">
+          <h2 class="description-element">{{ item.title }}</h2>
+          <p class="description-element">{{ item.description }}</p>
+        </div>
+
+        <div class="action-container">
+          <div class="action-wr">
+            <mat-checkbox
+              class="example-margin"
+              [(ngModel)]="item.isDone">
+            </mat-checkbox>
+            <h5 class="name">{{item.isDone ? 'Done' : 'Mark as done'}}</h5>
+          </div>
+        </div>
+      </div>
+
+    <div class="divader"></div>
+  </div>
+</div>
